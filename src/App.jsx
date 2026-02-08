@@ -7,6 +7,7 @@ import Experience from "./sections/Experience";
 import Testimonials from "./sections/Testimonials";
 import Contacts from "./sections/Contacts";
 import Footer from "./sections/Footer";
+import ParticlesBackground from "./components/ParticlesBackground";
 
 
 
@@ -18,6 +19,8 @@ export default function App(){
 
 
     <div className="relative gradient text-white">
+          <ParticlesBackground/>
+          
           <NavBar/>
           <Home/>
           <About/>
