@@ -8,6 +8,7 @@ import Testimonials from "./sections/Testimonials";
 import Contacts from "./sections/Contacts";
 import Footer from "./sections/Footer";
 import ParticlesBackground from "./components/ParticlesBackground";
+import CustomCursor from "./components/CustomCursor";
 
 
 
@@ -19,6 +20,9 @@ export default function App(){
 
 
     <div className="relative gradient text-white">
+          
+          
+          <CustomCursor/>
           <ParticlesBackground/>
           
           <NavBar/>
