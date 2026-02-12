@@ -6,11 +6,15 @@ export default function OverlayMenu({isOpen,onClose}){
 <AnimatePresence>
 
 {isOpen && (
-<div>
+<motion.div className="fixed inset-0 flex items-center justify-center z-50">
+<button>
+<fix/>
 
 
-  
-</div>
+</button>
+
+
+</motion.div>
 
 
 )
