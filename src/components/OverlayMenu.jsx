@@ -1,9 +1,14 @@
-import React from 'react'
+import {motion ,AnimatePresence} from 'framer-motion'
 
-const OverlayMenu = () => {
-  return (
-    <div></div>
+
+export default function OverlayMenu({isOpen,onClose}){
+  return(
+<AnimatePresence>
+
+{isOpen && }
+
+
+</AnimatePresence>
+
   )
 }
-
-export default OverlayMenu
