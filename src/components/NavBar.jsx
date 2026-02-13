@@ -1,7 +1,7 @@
 import OverlayMenu from "./OverlayMenu";
 ;
 import Logo from "../assets/Logo.png";
-import { useState } from "react";
+import { useState ,useRef} from "react";
 import { FiMenu } from "react-icons/fi";
 
 
@@ -9,7 +9,12 @@ import { FiMenu } from "react-icons/fi";
 export default function Navbar(){
   const[menuOpen,setMenuOpen]=useState(false);
   const [visible,setVisible ]=useState(true);
-  
+  const[forceVisible,setForceVisible]=useState(false);
+
+  const lastScrollY=useRef(0);
+  const
+
+
   
   return(
     <>
