@@ -66,7 +66,7 @@ export default function ParticlesBackground(){
       canvas.height=window.innerHeight;
       createParticles();
     }
-    handleResize();
+    handleResize(); 
     
     
     window.addEventListener("resize",handleResize);
