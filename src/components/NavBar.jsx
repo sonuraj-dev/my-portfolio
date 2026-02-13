@@ -12,7 +12,13 @@ export default function Navbar(){
   const[forceVisible,setForceVisible]=useState(false);
 
   const lastScrollY=useRef(0);
-  const
+  const timerId =useRef(null)
+
+  useEffect(()=>{
+                    const homeSection =document.querySelector("#home")
+
+
+  })
 
 
   
