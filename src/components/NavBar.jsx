@@ -15,7 +15,8 @@ export default function Navbar(){
   const timerId =useRef(null)
 
   useEffect(()=>{
-                    const homeSection =document.querySelector("#home")
+                    const homeSection =document.querySelector("#home");
+                    const observer = new IntersectionObserver
 
 
   })
