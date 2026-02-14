@@ -7,7 +7,7 @@ import Experience from "./sections/Experience";
 import Testimonials from "./sections/Testimonials";
 import Contacts from "./sections/Contacts";
 import Footer from "./sections/Footer";
-import ParticlesBackground from "./components/ParticlesBackground";
+//import ParticlesBackground from "./components/ParticlesBackground";
 import CustomCursor from "./components/CustomCursor";
 
 
@@ -23,7 +23,7 @@ export default function App(){
           
           
           <CustomCursor/>
-          <ParticlesBackground/>
+        {/*  <ParticlesBackground/> */}
           
           <NavBar/>
           <Home/>
