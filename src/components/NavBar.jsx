@@ -1,7 +1,7 @@
 import OverlayMenu from "./OverlayMenu";
 ;
 import Logo from "../assets/Logo.png";
-import { useState ,useRef} from "react";
+import { useState ,useRef, useEffect} from "react";
 import { FiMenu } from "react-icons/fi";
 
 
@@ -16,11 +16,55 @@ export default function Navbar(){
 
   useEffect(()=>{
                     const homeSection =document.querySelector("#home");
-                    const observer = new IntersectionObserver
+                    const observer = new IntersectionObserver(
+                      ([entry])=> {
+if(entry.isIntersecting){
+  setForceVisible(true);
+  setVisible(true);
+}
+else{
+  setForceVisible(false);
+}
+},{threshold : 0.1}
+                    )
+                    if(homeSection) observer.observe(homeSection);
+                    return () => {
+                      if(homeSection) observer.unobserve(homeSection);
+                    }
+                      },[])
+                    
 
+useEffect(()=>{
+  const handleScroll =()=> {
+    if(forceVisible){
+      setVisible(true);
+      return
+    }
 
-  })
+    const currentScrollY=window.scrollY;
+    if(currentScrollY>lastScrollY.current){
+      setVisible(false)
+    }
+    else{
+      setVisible(true)
 
+      if(timerId.current)clearTimeout(timerId.current);
+      timerId.current=setTimeout(()=>{
+        setVisible(false);
+      },3000)
+      }
+      lastScrollY.current=currentScrollY;
+    }
+    window.addEventListener("Scroll",handleScroll,{passive:true})
+
+    return ()=>{
+      window.removeEventListener("scroll",handleScroll)
+      if(timerId.current)clearTimeout(timerId.current);
+
+    }
+  },[forceVisible]
+)
+  
 
   
   return(
@@ -30,7 +74,7 @@ export default function Navbar(){
 
 
     <div className="flex items-center space-x-2">
-<img src={Logo} alt="logo" className="w-8 h-8"/>
+<img src={Logo} alt="logo" className="w-13 h-13"/>
 <div className="text-2xl font-bold text-white hidden sm:block">
   SitaRam
     </div>
@@ -45,7 +89,7 @@ export default function Navbar(){
  </div>
 <div className="hidden lg:block">
   <a href="#contact"
-  className="bg-gradient-to-r from-pink-500 to-blue-500 text-white px-5 py-2 rounded-full font-medium shadow-lg hover:opacity-90 transition-opacity duration-300">
+  className="bg-linear-to-r from-pink-500 to-blue-500 text-white px-5 py-2 rounded-full font-medium shadow-lg hover:opacity-90 transition-opacity duration-300">
 
     Reach Out
   </a>
