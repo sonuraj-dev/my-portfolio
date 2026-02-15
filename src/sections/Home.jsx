@@ -17,6 +17,18 @@ export default function Home(){
   const[deleting,setDeleting]=React.useState(false);
 
 
+  React.useEffect(()=>{
+    const current =roles[index];
+    const timeout=setTimeout(()=>{
+      if (!deleting && subIndex <current.length)setSubIndex(v=>v+1);
+      else if(!deleting && subIndex === current.length) setTimeout(()=> setDeleting(true),1200);
+      else if(deleting && subIndex>0 )setSubIndex(v=>v-1);
+
+    }
+  )
+  })
+
+
 
 
 
