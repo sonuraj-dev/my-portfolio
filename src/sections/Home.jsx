@@ -96,16 +96,17 @@ export default function Home(){
 
 
         </motion.div>
+        <motion.h1
+        className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-transparent bg-clip-text
+        bg-gradient-to-r from-[#1cd8d2] via-[#00bf8f] to-[#302b63] drop-shadow-lg">
+          Hello I'm <br/>
+          <span className="text-white font-bold text-5xl sm:text-6xl md:text-7xl lg:text-8xl lg:whitespace-nowrap">
+          SitaRam Das
+
+</span>
 
 
-
-
-
-
-
-
-
-
+        </motion.h1>
 
 
 
