@@ -89,7 +89,7 @@ export default function Home(){
               {roles[index].substring(0,subIndex)}
               </span>
             <span
-            className="inline-block w-[2px] ml-1 bg-whitw animate-pulse align-middle"
+            className="inline-block w-[2px] ml-1 bg-white animate-pulse align-middle"
             style ={{height:"1em"}}></span>
 
 
