@@ -23,10 +23,11 @@ export default function Home(){
       if (!deleting && subIndex <current.length)setSubIndex(v=>v+1);
       else if(!deleting && subIndex === current.length) setTimeout(()=> setDeleting(true),1200);
       else if(deleting && subIndex>0 )setSubIndex(v=>v-1);
-
-    }
+      else if(deleting && subIndex===0){setDeleting(false); setIndex(p=>(p+1)%roles.length);}
+    },deleting ? 40:60
   )
-  })
+  return ()=>clearTimeout(timeout);
+  },[subIndex,index,deleting,roles])
 
 
 
@@ -77,10 +78,19 @@ export default function Home(){
   <div className="flex flex-col justify-center h-full text-center lg:text-left relative">
     <div className="w-full lg:pr-24 mx-auto max-w-[48rem]">
 
-        <motion.div>
+        <motion.div
+        className="mb-3 text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold text-white tracking-wide min-h-[1.6em]"
+        initial={{opacity:0,y:12}}
+        animate={{opacity:1,y:0}}
+        transition={{duration:0.6}}
+        >
 
-
-
+            <span>
+              {roles[index].substring(0,subIndex)}
+              </span>
+            <span
+            className="inline-block w-[2px] ml-1 bg-whitw animate-pulse align-middle"
+            style ={{height:"1em"}}></span>
 
 
 
