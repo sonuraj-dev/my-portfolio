@@ -1,6 +1,7 @@
 import ParticlesBackground from "../components/ParticlesBackground";
 import {motion} from "framer-motion";
 import {useMemo} from "react";
+import React from "react";
 
 
 
@@ -11,7 +12,10 @@ export default function Home(){
 
 
   const roles=useMemo(() => ["Web Developer","Competitive coder","ML Engineer","Data Analyst"],[])
-  
+  const[index,setIndex]=React.useState(0);
+  const[subIndex,setSubIndex]=React.useState(0);
+  const[deleting,setDeleting]=React.useState(false);
+
 
 
 
