@@ -110,8 +110,22 @@ export default function Home(){
 
 
         </motion.h1>
+<motion.p className="mt-6 text-base sm:text-lg md:text-xl text-gray-300 max-w-2xl mx-auto lg:mx-0"
+initial={{opacity:0 ,y:20}}
+animate={{opacity:1 ,y:0}}
+transition={{delay:0.4 , duration :0.8}}>
 
+I turn complex ideas into seamless , high-impact web experiences - building modern ,scalable , lighting-fast applications that make a difference.
+  
+</motion.p>
+<motion.div className="mt-10 flex flex-wrap items-center justify-center lg:justify-start gap-6"
+initial={{opacity:0}}
+animate={{opacity:1}}
+transition={{delay:0.8,duration:0.8}}>
 
+  <a href="">View My Work </a>
+  <a href="">My Resume</a>
+</motion.div>
 
 
     </div>
