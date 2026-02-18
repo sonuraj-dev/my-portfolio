@@ -134,7 +134,7 @@ transition={{delay:0.8,duration:0.8}}>
     </div>
   </div>
 </div>
-this is the thing that should be added
+this is the thing that should be added tommorrow i will continue with this and try to complete it asp soon as possible
   </section>
   )
 }
