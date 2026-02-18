@@ -134,7 +134,7 @@ transition={{delay:0.8,duration:0.8}}>
     </div>
   </div>
 </div>
-
+this is the thing that should be added
   </section>
   )
 }
