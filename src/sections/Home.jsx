@@ -127,7 +127,9 @@ transition={{delay:0.8,duration:0.8}}>
   className="px-6 py-3 rounded-full font-medium text-lg text-white
   bg-gradient-to-r from-[#1cd8d2] via-[#00bf8f] to-[#302b63] 
   shadow-lg hover:scale-105 transition-all">View My Work </a>
-  <a href="">My Resume</a>
+  <a href="/Resume.pdf"
+  download
+className="px-6 py-3 rounded-full text-lg font-medium text-black bg-white hover:scale-105 transition-all">My Resume</a>
 </motion.div>
 
 
