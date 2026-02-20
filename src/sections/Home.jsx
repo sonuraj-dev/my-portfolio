@@ -2,9 +2,28 @@ import ParticlesBackground from "../components/ParticlesBackground";
 import {motion} from "framer-motion";
 import {useMemo} from "react";
 import React from "react";
+import { href } from "react-router-dom";
+import { FaXTwitter,FaLinkedinIn,FaGithub } from "react-icons/fa";
 
 
 
+const socials =[
+  {Icon : "FaXTwitter",label:"X",href:"https://twitter.com/SitaRamDas_"},
+  {Icon : "FaLinkedinIn",label:"LinkedIn",href:"https://www.linkedin.com/in/sonu-raj-6a799530a/"},
+  {Icon : "FaGithub",label:"GitHub",href:"https://github.com/sonuraj-dev"}
+
+
+
+]
+
+const glowVariants={
+  initials:{scale:1,y:0,filter :"drop-shadow(0 0 0 rgba(0,0,0,0))"},
+  hover:{
+    scale: 1.2,y:-3,
+    filter:"drop-shadow(0 0 8px rgba(13,88,204,0.9)) drop-shadow(0 0 18px rgba(16,185,129,0.8))",
+    transition :{type:"spring",stiffness:300,damping:15}
+  }
+}
 
 export default function Home(){
 
@@ -131,6 +150,12 @@ transition={{delay:0.8,duration:0.8}}>
   download
 className="px-6 py-3 rounded-full text-lg font-medium text-black bg-white hover:scale-105 transition-all">My Resume</a>
 </motion.div>
+
+<div className="mt-10 flex - gap-5 text-2xl md:text-3xl justify-center lg:justify-start ">
+  {socials.map(({Icon,label,href})=>(
+    <motion.a 
+  ))}
+
 
 
     </div>
