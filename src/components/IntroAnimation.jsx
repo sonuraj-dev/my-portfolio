@@ -1,9 +1,1 @@
-import React from 'react'
-
-const IntroAnimation = () => {
-  return (
-    <div>IntroAnimation</div>
-  )
-}
-
-export default IntroAnimation
+//this is to be done in the future when i want to add an intro animation to my portfolio
