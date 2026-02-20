@@ -2,27 +2,29 @@ import ParticlesBackground from "../components/ParticlesBackground";
 import {motion} from "framer-motion";
 import {useMemo} from "react";
 import React from "react";
-import { href } from "react-router-dom";
-import { FaXTwitter,FaLinkedinIn,FaGithub } from "react-icons/fa";
+
+import { FaTwitter,FaLinkedinIn,FaGithub } from "react-icons/fa";
+import { SiX } from "react-icons/si"; 
 
 
 
 const socials =[
-  {Icon : "FaXTwitter",label:"X",href:"https://twitter.com/SitaRamDas_"},
-  {Icon : "FaLinkedinIn",label:"LinkedIn",href:"https://www.linkedin.com/in/sonu-raj-6a799530a/"},
-  {Icon : "FaGithub",label:"GitHub",href:"https://github.com/sonuraj-dev"}
+  {Icon : SiX,label:"X",href:"https://twitter.com/SitaRamDas_"},
+  {Icon : FaLinkedinIn,label:"LinkedIn",href:"https://www.linkedin.com/in/sonu-raj-6a799530a/"},
+  {Icon : FaGithub,label:"GitHub",href:"https://github.com/sonuraj-dev"}
 
 
 
 ]
 
 const glowVariants={
-  initials:{scale:1,y:0,filter :"drop-shadow(0 0 0 rgba(0,0,0,0))"},
+  initial:{scale:1,y:0,filter :"drop-shadow(0 0 0 rgba(0,0,0,0))"},
   hover:{
     scale: 1.2,y:-3,
     filter:"drop-shadow(0 0 8px rgba(13,88,204,0.9)) drop-shadow(0 0 18px rgba(16,185,129,0.8))",
     transition :{type:"spring",stiffness:300,damping:15}
-  }
+  },
+  tap:{scale:0.95,y:0,transition:{duration:0.08}}
 }
 
 export default function Home(){
@@ -74,7 +76,7 @@ export default function Home(){
     "
 
     ></div>
-    <div className="absolute buttom-0 right-0
+    <div className="absolute bottom-0 right-0
     w-[70vw] sm:w-[z-500vw] md:w-[40vw]
     h-[70vw] sm:h-[50vw] md:h-[40vw]
     max-w-[500px] max-h-[500px]
@@ -93,7 +95,7 @@ export default function Home(){
 
 
 
-<div className="realtive z-10 h-full w-full max-w-7xl mx-auto px-4 grid grid-cols-1 lg:grid-cols-2">
+<div className="relative z-10 h-full w-full max-w-7xl mx-auto px-4 grid grid-cols-1 lg:grid-cols-2">
   <div className="flex flex-col justify-center h-full text-center lg:text-left relative">
     <div className="w-full lg:pr-24 mx-auto max-w-[48rem]">
 
@@ -154,6 +156,24 @@ className="px-6 py-3 rounded-full text-lg font-medium text-black bg-white hover:
 <div className="mt-10 flex - gap-5 text-2xl md:text-3xl justify-center lg:justify-start ">
   {socials.map(({Icon,label,href})=>(
     <motion.a 
+    href={href}
+    key={label}
+    target="_blank"
+    aria-label={label}
+    rel="noopener noreferrer"
+ 
+    variants={glowVariants}
+    initial="initials"
+    whileHover="hover"
+    whileTap="tap"
+    className="text-gray-300"
+    >
+      <Icon/>
+     
+
+
+
+    </motion.a>
   ))}
 
 
@@ -161,7 +181,9 @@ className="px-6 py-3 rounded-full text-lg font-medium text-black bg-white hover:
     </div>
   </div>
 </div>
-this is the thing that should be added tommorrow i will continue with this and try to complete it asp soon as possible
+
+</div>
   </section>
   )
+
 }
