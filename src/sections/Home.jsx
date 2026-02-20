@@ -5,7 +5,7 @@ import React from "react";
 
 import { FaTwitter,FaLinkedinIn,FaGithub } from "react-icons/fa";
 import { SiX } from "react-icons/si"; 
-
+import avator from "../assets/avator.png";
 
 
 const socials =[
@@ -65,7 +65,7 @@ export default function Home(){
     <div className="absolute inset-0">
     <div
     className="absolute -top-32 -left-32
-    w-[70vw] sm:w-[z-500vw] md:w-[40vw]
+    w-[70vw] sm:w-[500vw] md:w-[40vw]
     h-[70vw] sm:h-[50vw] md:h-[40vw]
     max-w-[500px] max-h-[500px]
     rounded-full
@@ -153,7 +153,7 @@ transition={{delay:0.8,duration:0.8}}>
 className="px-6 py-3 rounded-full text-lg font-medium text-black bg-white hover:scale-105 transition-all">My Resume</a>
 </motion.div>
 
-<div className="mt-10 flex - gap-5 text-2xl md:text-3xl justify-center lg:justify-start ">
+<div className="mt-10 flex gap-5 text-2xl md:text-3xl justify-center lg:justify-start ">
   {socials.map(({Icon,label,href})=>(
     <motion.a 
     href={href}
@@ -163,7 +163,7 @@ className="px-6 py-3 rounded-full text-lg font-medium text-black bg-white hover:
     rel="noopener noreferrer"
  
     variants={glowVariants}
-    initial="initials"
+    initial="initial"
     whileHover="hover"
     whileTap="tap"
     className="text-gray-300"
@@ -181,6 +181,37 @@ className="px-6 py-3 rounded-full text-lg font-medium text-black bg-white hover:
     </div>
   </div>
 </div>
+
+
+<div className="relative hidden lg:block">
+  <div className="absolute top-1/2 -translate-y-1/2 pointer-events-none"
+  style={{
+    right:"10px",width:"min(22vw,410px)",height:"min(40vw,760px)" ,borderRadius:"50%",
+    filter:"blur(38px)",opacity:0.32,
+    background:"conic-gradient(from 0deg,#1cd8d2, #00bf8f, #302b63, #1cd8d2)"
+    }}/>
+       
+  
+  <motion.img src={avator} alt="SitaRam Das"
+  className="absolute top-1/2 -translate-y-1/2 object-contain select-none pointer-events-none"
+  style={{
+    right:"-30px",width:"min(45vw,780px)",maxHeight:"90vh"
+  }}
+  initial={{opacity:0,y:40,scale:0.98}}
+  animate={{opacity:1 ,y:0,scale:1}}
+  transition={{delay:0.2,duration:0.8}}/>
+</div>
+
+
+
+
+
+
+
+
+
+
+
 
 </div>
   </section>
