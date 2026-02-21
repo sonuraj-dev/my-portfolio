@@ -1,3 +1,7 @@
+import {motion,AnimatePresence} from "framer-motion";
+import {useMemo} from "react";
+import React from "react";
+
 import { useEffect } from "react";
 
 export default function IntroAnimation({onFinish}){
@@ -25,7 +29,9 @@ export default function IntroAnimation({onFinish}){
         className="fixed inset-0 z-[9999] flex items-center justify-center bg-black text-white overflow-hidden"
         initial={{y:0}}
         exit={{y:"-100%",
-          transition:1.05,
+          transition:{
+            duration:1.05,
+          
           ease:[0.22,1,0.36,1],
         },
         }}
