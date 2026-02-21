@@ -1,24 +1,39 @@
-//this is to be done in the future when i want to add an intro animation to my portfolio
-import React from 'react'
-import { motion } from 'framer-motion'
+import { useEffect } from "react";
 
-const IntroAnimation = () => {
+export default function IntroAnimation({onFinish}){
+  const greetings=useMemo(() => ["Hello", "नमस्ते", "Hola", "Bonjour",
+      "Ciao", "Olá", "Здравствуйте",
+      "Merhaba", "Γειά", "Hej", "Hallo", "Salam"
+],[])
+  const[index,setIndex]=React.useState(0);
+  const[visible,setVisible]=React.useState(true);
+
+  useEffect(()=>{
+    if(index<greetings.length-1){
+      const id=setInterval(()=>setIndex((i)=>i+1),180);
+      return ()=>clearInterval(id);
+    } else {
+      const t=setTimeout(()=> setVisible(false),3000);
+      return ()=>clearTimeout(t);
+    }
+  },[index,greetings.length])
+
   return (
-    <motion.div className='fixed inset-0 bg-black z-50 flex items-center justify-center'
-    variants={{
-      initial:{opacity:1},
-      animate:{opacity:0}
-
-
-
-    }}
-    initial="initial"
-    animate="animate"
-    transition={{duration:1}}
-    >
-      <div className='text-white text-4xl font-bold'>SitaRam Das</div>
-    </motion.div>
-  )
-}
-
-export default IntroAnimation
+    <AnimatePresence onExitComplete={onFinish}>
+      {visible && (
+        <motion.div
+        className="fixed inset-0 z-[9999] flex items-center justify-center bg-black text-white overflow-hidden"
+        initial={{y:0}}
+        exit={{y:"-100%",
+          transition:1.05,
+          ease:[0.22]
+        }}
+><motion.h1
+key={index}
+className="text-5xl md:text-7xl lg:text-8xl font-bold"
+initial={{opacity:0, y:20}}
+animate={{opacity:1, y:0}}
+exit={{opacity:0, y:-20}}
+transition={{duration:0.12}}
+>
+  greetings[index]
