@@ -26,9 +26,12 @@ export default function IntroAnimation({onFinish}){
         initial={{y:0}}
         exit={{y:"-100%",
           transition:1.05,
-          ease:[0.22]
+          ease:[0.22,1,0.36,1],
+        },
         }}
-><motion.h1
+>
+  
+  <motion.h1
 key={index}
 className="text-5xl md:text-7xl lg:text-8xl font-bold"
 initial={{opacity:0, y:20}}
@@ -36,4 +39,10 @@ animate={{opacity:1, y:0}}
 exit={{opacity:0, y:-20}}
 transition={{duration:0.12}}
 >
-  greetings[index]
+  {greetings[index]}
+</motion.h1>
+</motion.div>
+      )}
+    </AnimatePresence>
+  )
+}
