@@ -1,9 +1,2 @@
-import React from 'react'
-
-const About = () => {
+export default function About(){
   return (
-    <div className='w-full h-screen text-white'>About</div>
-  )
-}
-
-export default About
