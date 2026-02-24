@@ -1,16 +1,90 @@
-# React + Vite
+🚀 Personal Portfolio Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern and responsive Portfolio Website built using React.js with smooth animations and interactive UI effects.
+This project showcases my skills, projects, and contact information in a clean and professional design.
 
-Currently, two official plugins are available:
+🌟 Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+⚛️ Built with React.js (Component-Based Architecture)
 
-## React Compiler
+🎨 Smooth Animations & Transitions
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+📱 Fully Responsive Design (Mobile + Desktop)
 
-## Expanding the ESLint configuration
+🖼️ Interactive Project Showcase Section
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+📄 Resume Download Option
+
+📬 Contact Form Integration
+
+🌙 Modern UI with Clean Layout
+
+🛠️ Tech Stack
+
+Frontend: React.js
+
+Styling: CSS / Tailwind CSS (if used)
+
+Animations: Framer Motion / AOS / CSS Animations
+
+Icons: React Icons
+
+Deployment: GitHub Pages / Vercel / Netlify
+
+📂 Project Structure
+portfolio/
+│── public/
+│── src/
+│   ├── components/
+│   ├── pages/
+│   ├── assets/
+│   ├── App.js
+│   └── index.js
+│── package.json
+│── README.md
+⚡ Installation & Setup
+
+1️⃣ Clone the repository
+
+git clone https://github.com/your-username/portfolio.git
+
+2️⃣ Navigate to project folder
+
+cd portfolio
+
+3️⃣ Install dependencies
+
+npm install
+
+4️⃣ Start development server
+
+npm start
+
+The app will run on:
+
+http://localhost:3000
+🎬 Animation Details
+
+Smooth page transitions
+
+Fade-in sections on scroll
+
+Hover effects on project cards
+
+Animated hero section
+
+
+📌 Future Improvements
+
+Add dark/light theme toggle
+
+Add blog section
+
+Improve performance optimization
+
+Add backend for contact form
+
+👨‍💻 Author
+
+Sonu Raj
+Frontend Developer | React Enthusiast
