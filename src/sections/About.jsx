@@ -315,3 +315,103 @@ function enroll(course){
  document.getElementById("enrollList").innerHTML+=cour
 
 
+
+
+/* Q13 */
+function validateStudent(){
+ let name=document.getElementById("name").value;
+ let roll=document.getElementById("roll").value;
+ let cgpa=parseFloat(document.getElementById("cgpa").value);
+
+ if(name.length>=3){
+   if(roll.startsWith("VIT") && cgpa>=7.5)
+     document.getElementById("validResult").innerHTML="Valid Student";
+   else
+     document.getElementById("validResult").innerHTML="Invalid Roll/CGPA";
+ } else {
+   document.getElementById("validResult").innerHTML="Name too short";
+ }
+}
+
+/* Q14 */
+let courses=["Data Mining","AI","Web Programming"];
+function renderCourses(){
+ let list=document.getElementById("courseList");
+ list.innerHTML="";
+ for(let i=0;i<courses.length;i++){
+   list.innerHTML+="<li>"+courses[i]+"</li>";
+ }
+}
+
+/* Q15 */
+function showTrack(){
+ let radio=document.querySelector('input[name="track"]:checked');
+ document.getElementById("trackResult").innerHTML=
+ radio ? "Selected: "+radio.value : "None";
+}
+
+/* Q16 */
+function toggleDarkMode(){
+ document.body.style.background=
+ document.getElementById("darkMode").checked ? "#333" : 
+ "linear-gradient(135deg,#667eea,#764ba2)";
+}
+function toggleChat(){
+ document.getElementById("chatBox").style.display=
+ document.getElementById("chat").checked ? "block":"none";
+}
+
+/* Q17 */
+function showNotification(){
+ document.getElementById("notification").style.display="block";
+}
+function showQuickMenu(){
+ document.getElementById("quickMenu").style.display="block";
+}
+
+/* Q18 */
+function updateCharCount(){
+ let count=document.getElementById("submission").value.length;
+ document.getElementById("charCount").innerText=count;
+}
+function submitAssignment(){
+ let content=document.getElementById("submission").value.trim();
+ document.getElementById("submitResult").innerHTML=
+ content.length>=50 ? "Submitted Successfully" : "Minimum 50 characters required";
+}
+
+/* Q19 */
+function showCategory(){
+ let value=document.getElementById("category").value;
+ document.getElementById("categoryResult").innerHTML=
+ value? "Selected: "+value:"Select category";
+}
+
+/* Q20 */
+function updateSkills(){
+ let selected=Array.from(document.getElementById("skills").selectedOptions)
+ .map(opt=>opt.value);
+ document.getElementById("skillsResult").innerHTML=
+ selected.length>0?selected.join(", "):"No skills selected";
+}
+
+/* Q21 */
+function drawChart(){
+ let canvas=document.getElementById("chart");
+ let ctx=canvas.getContext("2d");
+ ctx.fillStyle="green";
+ ctx.fillRect(20,50,200,30);
+ ctx.fillText("Data Mining 85%",20,45);
+}
+function clearChart(){
+ let canvas=document.getElementById("chart");
+ let ctx=canvas.getContext("2d");
+ ctx.clearRect(0,0,canvas.width,canvas.height);
+}
+
+/* Q22 */
+let count=0;
+function enroll(course){
+ count++;
+ document.getElementById("enrollList").innerHTML+=cour
+
