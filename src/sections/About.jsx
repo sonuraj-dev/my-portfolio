@@ -312,15 +312,6 @@ function clearChart(){
 let count=0;
 function enroll(course){
  count++;
- document.getElementById("enrollList").innerHTML+=course+" ✓<br>";
-}
-document.getElementById("aiBtn").addEventListener("click",function(){
- enroll("AI");
-});
-
-</script>
-
-</body>
-</html>
+ document.getElementById("enrollList").innerHTML+=cour
 
 
