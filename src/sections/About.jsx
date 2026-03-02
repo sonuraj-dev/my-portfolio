@@ -418,7 +418,67 @@ function enroll(course){
 
 
 
-/* Q13 */
+/* Q13 */vv
+function validateStudent(){
+ let name=document.getElementById("name").value;
+ let roll=document.getElementById("roll").value;
+ let cgpa=parseFloat(document.getElt=0;
+function enroll(course){
+ count++;
+ document.getElementById("enrollList").innerHTML+=cour
+
+
+
+
+/* Q13 */vv
+function validateStudent(){
+ let name=document.getElementById("name").value;
+ let roll=document.getElementById("roll").value;
+ let cgpa=parseFloat(document.getElt=0;
+function enroll(course){
+ count++;
+ document.getElementById("enrollList").innerHTML+=cour
+
+
+
+
+/* Q13 */vv
+function validateStudent(){
+ let name=document.getElementById("name").value;
+ let roll=document.getElementById("roll").value;
+ let cgpa=parseFloat(document.getElt=0;
+function enroll(course){
+ count++;
+ document.getElementById("enrollList").innerHTML+=cour
+
+
+
+
+/* Q13 */vv
+function validateStudent(){
+ let name=document.getElementById("name").value;
+ let roll=document.getElementById("roll").value;
+ let cgpa=parseFloat(document.getElt=0;
+function enroll(course){
+ count++;
+ document.getElementById("enrollList").innerHTML+=cour
+
+
+
+
+/* Q13 */vv
+function validateStudent(){
+ let name=document.getElementById("name").value;
+ let roll=document.getElementById("roll").value;
+ let cgpa=parseFloat(document.getElt=0;
+function enroll(course){
+ count++;
+ document.getElementById("enrollList").innerHTML+=cour
+
+
+
+
+/* Q13 */vv
 function validateStudent(){
  let name=document.getElementById("name").value;
  let roll=document.getElementById("roll").value;
