@@ -9,7 +9,7 @@ import avator from "../assets/avator.png";
 
 
 const socials =[
-  {Icon : SiX,label:"X",href:"https://twitter.com/SitaRamDas_"},
+  {Icon : SiX,label:"X",href:"https://twitter.com_"},
   {Icon : FaLinkedinIn,label:"LinkedIn",href:"https://www.linkedin.com/in/sonu-raj-6a799530a/"},
   {Icon : FaGithub,label:"GitHub",href:"https://github.com/sonuraj-dev"}
 
@@ -125,7 +125,7 @@ export default function Home(){
         transition={{duration:1}}>
           Hello, I'm <br/>
           <span className="text-white font-bold text-5xl sm:text-6xl md:text-7xl lg:text-8xl lg:whitespace-nowrap">
-          SitaRam Das
+          Sonu Raj
 
 </span>
 
