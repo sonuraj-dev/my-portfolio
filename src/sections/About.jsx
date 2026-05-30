@@ -15,6 +15,14 @@ const glows=[
     <div key={i} className={`absolute rounded-full bg-gradient-to-r from-[#302b63] via-[#00bf8f] to-[#1cd8d2] animate-pulse ${c}`}/> 
   ))}
 </div>
+
+<div className="relative z-10 max-w-6xl w-full mx-auto px-6 md:px-10 lg:px-12 py-20 flex flex-col gap-12 " >
+  <Motion.div className="flex flex-col md:flex-row items-center md:items-stretch gap-8">
+
+  </Motion.div>
+
+
+</div>
       </section>
   
 )
