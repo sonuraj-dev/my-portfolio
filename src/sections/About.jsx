@@ -34,7 +34,15 @@ const glows=[
   transition={{duration:0.6 }}
   viewport={{once:true , amount:0.4}}
   >
-<motion.div className="relative w-[160px] h-[160px] md:w-[200px] md:h-[200px] rounded-2xl overflow-hidden shadow-2xl bg-gradient-to-r from-[#1cd8d2]/20 to-[#302b63]/20 border-[#1cd8d2]/35">
+<motion.div className="relative w-[160px] h-[160px] md:w-[200px] md:h-[200px] rounded-2xl overflow-hidden shadow-2xl bg-gradient-to-r from-[#1cd8d2]/20 to-[#302b63]/20 border-[#1cd8d2]/25"
+
+whileHover={{scale:1.02}}
+transition={{tyoe:"spring",stiffness:400 ,damping:18}}>
+
+
+
+
+
   <img src ={boy} alt ="profile" className="absolute inset-0"/>
 
 </motion.div>
@@ -47,7 +55,7 @@ const glows=[
   <p className="mt-4 text-gray-300 leading-relaxed text-base sm:text-lg max-w-2xl md:max-w-3xl">
   Passionate about leveraging machine learning to solve real-world problems and drive innovation. With a strong foundation in data analysis, model development, and deployment, I am dedicated to creating impactful solutions that enhance user experiences and optimize business processes.
   </p>
-  <div>
+  <div className="mt-6 grid grid-cols-2 sm:grid-cols-3 gap-3 sm:gap-4 max-w-xl">
     {stats.map((item,i)=> (
       <motion.div key={i} className="rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-center"
       initial={{opacity:0,y:10}}
@@ -60,10 +68,29 @@ const glows=[
       </motion.div>
     ))}
   </div>
+<div className="mt-6 flex flex-col sm:flex-гом gар-3 sm-gap-4 justify-center wd:justify-start">
+  < a href="#projects" className="inline-flex items-center justify-center rounded-lg bg-white text-black font-semibold px-5 py-3 hover:bg-gray-200 transition"> View Projects</a>
+  <a href="#contact" className="Inline-flex items-center justify-center rounded-lg border border-white/20 bg-white/16 text-white px-5 py-3 hover:bg-white/20 transition" >Get in Touch
+</a>
+</div>
+
 </div>
   </motion.div>
-
-
+  <motion.div className="text-center md:text-left"
+initial={{opacity:0, x: -30}}
+whileInView={{opacity:1, x:0}}
+transition={{duration:0.6}}
+viewport={{once:true, amount:0.4}}>
+<h3 className="text-2x1 sm:text-3xl font-bold text-white mb-3">
+  About me
+</h3>
+<p className="text-gray-300 leading-relaxed text-base sm:text-lg">
+  I'm a ML Engineer, web Developer and a data anaylst enthusiast - Passionate about building fast and training models that can be beneficial for the society. 
+</p>
+<p className="mt-4 text-gray-400 text-base sm:text-lg">
+  I love turing ideas into scalable, user-friendly products that make an impact.
+</p>
+</motion.div>
 </div>
       </section>
   
