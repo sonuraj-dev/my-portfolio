@@ -1,6 +1,6 @@
 import {motion} from "framer-motion";
 
-import boy from "../assets/boy.jpg"
+import boy from "../assets/boy.jpeg"
 
 
 export default function About(){
