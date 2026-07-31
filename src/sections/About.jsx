@@ -68,7 +68,7 @@ transition={{tyoe:"spring",stiffness:400 ,damping:18}}>
       </motion.div>
     ))}
   </div>
-<div className="mt-6 flex flex-col sm:flex-гом gар-3 sm-gap-4 justify-center wd:justify-start">
+<div className="mt-6 flex flex-col sm:flex-row gар-3 sm:gap-4 justify-center md:justify-start">
   < a href="#projects" className="inline-flex items-center justify-center rounded-lg bg-white text-black font-semibold px-5 py-3 hover:bg-gray-200 transition"> View Projects</a>
   <a href="#contact" className="Inline-flex items-center justify-center rounded-lg border border-white/20 bg-white/16 text-white px-5 py-3 hover:bg-white/20 transition" >Get in Touch
 </a>
@@ -84,11 +84,11 @@ viewport={{once:true, amount:0.4}}>
 <h3 className="text-2x1 sm:text-3xl font-bold text-white mb-3">
   About me
 </h3>
-<p className="text-gray-300 leading-relaxed text-base sm:text-lg">
-  I'm a ML Engineer, web Developer and a data anaylst enthusiast - Passionate about building fast and training models that can be beneficial for the society. 
+<p className="text-gray-300 leading-relaxed text-base sm:text-lg"><b>I'm a ML Engineer, web Developer and a data anaylst enthusiast - Passionate about building fast and training models that can be beneficial for the society.</b>
+   
 </p>
-<p className="mt-4 text-gray-400 text-base sm:text-lg">
-  I love turing ideas into scalable, user-friendly products that make an impact.
+<p className="mt-4 text-gray-400 text-base sm:text-lg"><b>
+  I love turning ideas into scalable, user-friendly products that make an impact.</b>
 </p>
 </motion.div>
 </div>
