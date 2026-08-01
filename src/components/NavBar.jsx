@@ -76,7 +76,7 @@ useEffect(()=>{
     <div className="flex items-center space-x-2">
 <img src={Logo} alt="logo" className="w-13 h-13"/>
 <div className="text-2xl font-bold text-white hidden sm:block">
-  SitaRam
+  SonuRaj
     </div>
 </div>
 <div className="block lg:absolute lg:left-1/2 lg:transform-x-1/2">

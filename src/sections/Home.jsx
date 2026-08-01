@@ -192,7 +192,7 @@ className="px-6 py-3 rounded-full text-lg font-medium text-black bg-white hover:
     }}/>
        
   
-  <motion.img src={avator} alt="SitaRam Das"
+  <motion.img src={avator} alt="haribol"
   className="absolute top-1/2 -translate-y-1/2 object-contain select-none pointer-events-none"
   style={{
     right:"-30px",width:"min(45vw,780px)",maxHeight:"90vh"
