@@ -12,6 +12,8 @@ import img3 from "../assets/img3.JPG"
 import photo1 from "../assets/photo1.JPG"
 import photo2 from "../assets/photo2.PNG"
 import photo3 from "../assets/photo3.png"
+import portfolio from "../assets/portfolio.png"
+import portfoliom from "../assets/portfoliom.png"
 
 
 const useIsMobile = (query = "(max-width: 639px)") => {
@@ -37,22 +39,28 @@ const sceneRef = useRef (null);
 const projects = useMemo(
     ()=>[
        {
-title: "nk studio",
-link: "https://www.nk.studio/",
+title: "Medicare",
+link: "https://medicare1-alpha.vercel.app/",
 bgColor: "#0d4d3d",
 image: isMobile ? photo1: img1, // use mobile or desktop image
 },
 {
-title: "Gamily",
-link: "https://gamilyapp.com/",
-bgColor: "#3884d3",
+title: "SaaS Dashboard",
+link: "https://saa-s-dashboard-q37z.vercel.app/",
+bgColor: "#8f00ff",
 image: isMobile ? photo2: img2,
 },
 {
-title: "Hungry Tiger",
-link: "https://www.eathungrytiger.com/",
-bgColor: "#dc9317",
+title: "Star Shooter",
+link: "https://sonuraj-dev.github.io/-STAR-SHOOTER-/",
+bgColor: "#00001c",
 image: isMobile? photo3: img3,
+},
+{
+title: "My Portfolio",
+link: "https://portfoliosonuraj.netlify.app/",
+bgColor: "#3bb143",
+image: isMobile? portfoliom: portfolio,
 },
 ],
 [isMobile] // re-run only when 'isMobile changes
@@ -125,7 +133,7 @@ textAlign: isMobile ? "center": "left",
 <div className={`relative w-full overflow-hidden bg-black/20 shadow-2xl
 md:shadow-[0_35px_60px_-15px_rgba(0,0,0,0.7)] ${
 isMobile ? "mb-6 rounded-lg": "mb-10 sm:mb-12 rounded-xl"
-} h-[62vh] sm:h-[66vh]`}
+} h-[70vh] sm:h-[66vh]`}
 style={{zIndex: 10, transition: "box-shadow 250ms ease"}}
 >
 <img src={project.image} alt={project.title}
